@@ -1,0 +1,8 @@
+.menu{
+    border: solid black 1px;
+    width: 34%;
+    height: 500px;
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+}

@@ -1,0 +1,7 @@
+.mapbox{
+        border: solid black 1px;
+        width: 65%;
+        height: 100%;
+        display: inline-block;
+        margin-left: auto;
+}
