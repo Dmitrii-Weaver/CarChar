@@ -6,7 +6,7 @@ import Map from './mapbox.js'
 export default function contentbox() {
     return (
         <div className={styles.contentbox}>
-            <h1 >CarCharProject</h1>
+            <h1 className={styles.header}>CarCharProject</h1>
             <div>
             <Leftmenu />
             <Map />

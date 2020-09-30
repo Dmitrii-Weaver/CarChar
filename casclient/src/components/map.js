@@ -1,26 +1,29 @@
-import React, { Component } from 'react'
-import L from 'leaflet'
-import 'leaflet/dist/leaflet.css'
-import styled from 'styled-components'
+import React, { Component } from 'react';
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+ 
+const style = {
+    width: '49%',
+    height: '630px'
+  }
 
-const Wrapper = styled.div`
-    width: ${props => props.width};
-    height: ${props => props.height};
-`
-export default class Map extends Component {
-   componentDidMount(){
-       this.map = L.map('map', {
-           center:[65, 25],
-           zoom:5,
-           zoomControl: true
-       })
-       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-           detectRetina: true,
-           maxZoom: 19,
-           maxNativeZoom:17
-       }).addTo(this.map)
-   }
-   render(){
-       return <Wrapper width="100%" height="600px" id="map"/>
-   }
+export class MapContainer extends Component {
+  render() {
+    return (
+      <Map google={this.props.google}
+      style={style}
+      initialCenter={{
+        lat: 40.854885,
+        lng: -88.081807
+      }}>
+          
+        <Marker onClick={this.onMarkerClick}name={'Current location'} />
+ 
+
+      </Map>
+    );
+  }
 }
+ 
+export default GoogleApiWrapper({
+  apiKey: ("AIzaSyAPIhlHx1M9RhadWY7xZjBGTAGkmT2jJZY")
+})(MapContainer)
