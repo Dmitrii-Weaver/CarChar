@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from "./mapbox.module.css"
 import MapContainer from "./map.js"
-export default function mapbox() {
+export default function mapbox(props) {
 
 
     return (
         <div className={styles.mapbox}>
-            <MapContainer />
+            <MapContainer items={props.items}/>
         </div>
     )
 }

@@ -6,17 +6,18 @@ const style = {
     height: '630px'
   }
 
-export class MapContainer extends Component {
+export class MapContainer extends Component  {
   render() {
     return (
       <Map google={this.props.google}
       style={style}
       initialCenter={{
-        lat: 40.854885,
-        lng: -88.081807
-      }}>
+        lat: 65.012093,
+        lng: 25.465076
+      }}
+      zoom={5}>
           
-        <Marker onClick={this.onMarkerClick}name={'Current location'} />
+        <Marker onClick={this.onMarkerClick} name={'Current location'} position={{ lat: -34.397, lng: 150.644 }}/>
  
 
       </Map>

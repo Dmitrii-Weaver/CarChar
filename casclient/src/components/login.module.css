@@ -1,0 +1,44 @@
+.contentbox{
+    border: 1px solid black;
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.header{
+    text-align: center;
+}
+
+.loginbox{
+    border: 1px solid black;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.textinputcontainer{
+    width: 125px;
+    margin:  auto;
+    
+}
+.textinput{
+    width: 100%;
+    margin:  auto;
+    
+
+
+}
+
+
+button {
+    width: 100%;
+    margin:  auto;
+  }
+.logincontainer{
+    width: 75px;
+    margin:  auto;
+    
+}
