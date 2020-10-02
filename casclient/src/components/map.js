@@ -16,9 +16,13 @@ export class MapContainer extends Component  {
         lng: 25.465076
       }}
       zoom={5}>
-          
-        <Marker onClick={this.onMarkerClick} name={'Current location'} position={{ lat: -34.397, lng: 150.644 }}/>
+        <Marker onClick={this.onMarkerClick} name={'Current location'} position={{ lat:  65, lng: 25 }}/>
  
+        {
+          
+          this.props.items.map(item => <Marker position={{lat:item.lat, lng:item.lng}} key={item.id} title={item.name} {...item}/>)
+        }
+        
 
       </Map>
     );

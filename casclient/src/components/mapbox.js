@@ -6,6 +6,7 @@ export default function mapbox(props) {
 
     return (
         <div className={styles.mapbox}>
+            
             <MapContainer items={props.items}/>
         </div>
     )

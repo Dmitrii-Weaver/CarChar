@@ -15,8 +15,27 @@ let data = [
     {
         id:"1",
         name:"fake",
-        lat:"65.012093",
-        lon:"25.465076",
+        lat:"66.012093",
+        lng:"25.465076",
+        type:"unknown",
+        speed:"fast",
+        price:"12121",
+        isTaken:false
+    },
+    {
+        id:"2",
+        name:"dadadad",
+        lat:"65.012000",
+        lng:"24.465000",
+        type:"unknown",
+        speed:"fast",
+        price:"12121",
+        isTaken:false
+    } ,  {
+        id:"3",
+        name:"aaa",
+        lat:"70.012000",
+        lng:"20.465000",
         type:"unknown",
         speed:"fast",
         price:"12121",

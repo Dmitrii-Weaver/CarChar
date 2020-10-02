@@ -3,7 +3,7 @@ import styles from "./login.module.css"
 import axios from 'axios';
 import history from '../history.js'
 
-let userUser = "TI PIDOR"
+let userUser 
 let userPassword
 
 function usernameChanged(event) {
@@ -11,21 +11,23 @@ function usernameChanged(event) {
 }
 function passwordChanged(event) {
     userPassword = event.target.value
-    console.log(userPassword)
 }
 
 
-function buttonClick(event){
+function buttonClick(event) {
     console.log("clicked")
     axios.post('http://localhost:4000/login', {}, {
         auth: {
             username: userUser,
             password: userPassword
-        }})
+        }
+    })
         .then(response => {
-            history.push('/content');
-            window.location.reload(false);
-        })
+            
+                history.push('/content');
+                window.location.reload(false);
+            
+        } ) 
 }
 
 export default function login() {
@@ -40,18 +42,18 @@ export default function login() {
                     <div className={styles.textinputcontainer}>
                         <input type="text" placeholder="Enter Username" name="uname" required className={styles.textinput} onChange={usernameChanged}></input>
                     </div>
-        
+
 
                     <p className={styles.header}>Password</p>
                     <div className={styles.textinputcontainer}>
                         <input type="text" placeholder="Enter Password" name="psw" required className={styles.textinput} onChange={passwordChanged}></input>
                     </div>
-                    
+
                     <br></br>
                     <div className={styles.logincontainer}>
-                    <button type="submit" onClick={() => buttonClick()}>Login</button>
+                        <button type="submit" onClick={() => buttonClick()}>Login</button>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
