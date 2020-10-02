@@ -1,5 +1,21 @@
 import React from 'react'
 import styles from "./login.module.css"
+import axios from 'axios';
+import history from '../history.js'
+
+function buttonClick(){
+    console.log("clicked")
+    axios.post('http://localhost:4000/login', {}, {
+        auth: {
+            username:"a",
+            password:"b"
+        }})
+        .then(response => {
+            history.push('/content');
+            window.location.reload(false);
+        })
+}
+
 export default function login() {
     return (
         <div>
@@ -21,7 +37,7 @@ export default function login() {
                     
                     <br></br>
                     <div className={styles.logincontainer}>
-                    <button type="submit"  >Login</button>
+                    <button type="submit" onClick={() => buttonClick()}>Login</button>
                     </div>
                    
                 </div>
