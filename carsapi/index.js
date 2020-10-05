@@ -13,33 +13,33 @@ app.use(cors())
 
 let data = [
     {
-        id:"1",
+        id:"0",
         name:"fake",
         lat:"66.012093",
         lng:"25.465076",
         type:"unknown",
         speed:"fast",
         price:"12121",
-        isTaken:false
+        isTaken:"this charger is not used at the moment"
     },
     {
-        id:"2",
+        id:"1",
         name:"dadadad",
         lat:"65.012000",
         lng:"24.465000",
         type:"unknown",
         speed:"fast",
         price:"12121",
-        isTaken:false
+        isTaken:"this charger is not used at the moment"
     } ,  {
-        id:"3",
+        id:"2",
         name:"aaa",
         lat:"70.012000",
         lng:"20.465000",
         type:"unknown",
         speed:"fast",
         price:"12121",
-        isTaken:false
+        isTaken:"this charger is not used at the moment"
     }
 ]
 let users = [

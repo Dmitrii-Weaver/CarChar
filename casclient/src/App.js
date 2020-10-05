@@ -12,7 +12,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       items: [],
-      isLoggedIn : false
+      isLoggedIn : false,
+      SelectedCharger: null
+      
     }
   }
   componentDidMount(){
@@ -23,6 +25,10 @@ class App extends React.Component {
       });
   }
 
+  SetSelectedCharger = (parameter) => {
+    this.setState({SelectedCharger: parameter})
+  }
+
 
 
   render() {
@@ -31,7 +37,7 @@ class App extends React.Component {
       <Router history={history}>
 
         <Route path="/" exact component={Login} />
-        <Route path="/content" render={(props) => <Contentbox items={this.state.items} /> } />      
+        <Route path="/content" render={(props) => <Contentbox items={this.state.items} SetSelectedCharger={this.SetSelectedCharger} SelectedCharger={this.state.SelectedCharger}/> } />      
         
       </Router>
       

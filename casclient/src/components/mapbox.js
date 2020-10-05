@@ -7,7 +7,8 @@ export default function mapbox(props) {
     return (
         <div className={styles.mapbox}>
             
-            <MapContainer items={props.items}/>
+            <MapContainer items={props.items} CharData={props.CharData} SetSelectedCharger={props.SetSelectedCharger}/>
+            
         </div>
     )
 }
