@@ -1,8 +1,15 @@
 .menu{
     border: solid black 1px;
     width: 34%;
-    height: 500px;
+    height: 100%;
     display: inline-block;
     float: left;
     margin-right: 5px;
+}
+
+.text{
+    margin-left: 15px;
+}
+.list{
+    margin-left: 40px;
 }

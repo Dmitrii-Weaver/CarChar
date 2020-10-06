@@ -11,37 +11,9 @@ app.use(express.static('public'))
 app.use(bodyparser.json())
 app.use(cors())
 
-let data = [
-    {
-        id:"0",
-        name:"fake",
-        lat:"66.012093",
-        lng:"25.465076",
-        type:"unknown",
-        speed:"fast",
-        price:"12121",
-        isTaken:"this charger is not used at the moment"
-    },
-    {
-        id:"1",
-        name:"dadadad",
-        lat:"65.012000",
-        lng:"24.465000",
-        type:"unknown",
-        speed:"fast",
-        price:"12121",
-        isTaken:"this charger is not used at the moment"
-    } ,  {
-        id:"2",
-        name:"aaa",
-        lat:"70.012000",
-        lng:"20.465000",
-        type:"unknown",
-        speed:"fast",
-        price:"12121",
-        isTaken:"this charger is not used at the moment"
-    }
-]
+let data2 = require('./data.json')
+
+
 let users = [
     {
         id:"1",
@@ -49,6 +21,10 @@ let users = [
         password:"$2b$08$qChPmuOhuFKJb4tEvrHwKuPBLNVC2.mshjJ2sio6DrfVQ6PLq8KGW"
     }
 ]
+app.get("/data2", (req, res) => {
+
+    res.json(data2)
+})
 
 app.get("/data", (req, res) => {
 

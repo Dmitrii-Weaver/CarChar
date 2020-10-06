@@ -1,35 +1,56 @@
-import React from 'react'
+import { render } from '@testing-library/react'
+import React, { Component } from 'react'
 import styles from "./leftmenu.module.css"
 
-export default function leftmenu(props) {
 
+    
+
+export default class leftmenu extends Component {
+   state = {
+       buttonText:"Start charging",
+        selectedSlot: null
+   }
+    
+
+SelectSlot(Connection){
+    this.selectedSlot = Connection
+    console.log(this.selectedSlot)
+}
+
+
+render(){
     let output = (
         <div className={styles.menu}>
-            <h1>Name : {}</h1>
-            <h3>Type : {}</h3>
-            <h3>Speed : {}</h3>
-            <h3>Pricing method : </h3>
-            <h3>Price : {}</h3>
-            <h2>{}</h2>
+            <h1 className={styles.text}>Name : </h1>
+            <h3 className={styles.text}>Address : </h3>
+            <h4 className={styles.text}>Access :</h4>
+            <h4 className={styles.text}>Status : </h4>
+            <h3 className={styles.text}>Connections :</h3>
+            <h3 className={styles.text}>Price : </h3>
         </div>
     )
-    if (props.SelectedCharger != null) {
+    if (this.props.SelectedCharger != null) {
 
 
         output = (
             <div className={styles.menu}>
-                <h1>Name : {props.SelectedCharger.name}</h1>
-                <h3>Type : {props.SelectedCharger.type}</h3>
-                <h3>Speed : {props.SelectedCharger.speed}</h3>
-                <h3>Pricing method : </h3>
-                <h3>Price : {props.SelectedCharger.price}</h3>
-                <h2>{props.SelectedCharger.taken}</h2>
+                <h1 className={styles.text} >Name : {this.props.SelectedCharger.AddressInfo.Title}</h1>
+                <h3 className={styles.text}>Address : {this.props.SelectedCharger.AddressInfo.AddressLine1}</h3>
+                <h4 className={styles.text}>Access : {this.props.SelectedCharger.UsageType.Title}</h4>
+                <h4 className={styles.text}>Status : {this.props.SelectedCharger.StatusType.Title}</h4>
+                <h3 className={styles.text}>Connections :</h3>
+
+                {
+                    this.props.SelectedCharger.Connections.map(Connection => (<li className={styles.list} onClick={() => this.SelectSlot(Connection)}>{Connection.ConnectionType.Title}</li>))
+                }
+
+                <h3 className={styles.text}>Price : {this.props.SelectedCharger.UsageCost}</h3>
+                <button id={"ChargeButton"} onClick={() => this.startCharging()} >{this.state.buttonText}</button>
             </div>
         )
 
     }
-
     return (
         output
-    )
+    )}
 }

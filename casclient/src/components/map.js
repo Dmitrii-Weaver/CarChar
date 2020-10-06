@@ -28,7 +28,7 @@ export class MapContainer extends Component  {
         
  
         {     
-          this.props.items.map(item => <Marker onClick={()=>this.onMarkerClick(item, this.props.CharData)} position={{lat:item.lat, lng:item.lng}} key={item.id} title={item.name} {...item}/>)
+          this.props.items.map(item => <Marker onClick={()=>this.onMarkerClick(item, this.props.CharData)} position={{lat:item.AddressInfo.Latitude, lng:item.AddressInfo.Longitude}} key={item.AddressInfo.ID} title={item.name} {...item}/>)
         }
         
 
