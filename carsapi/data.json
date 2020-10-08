@@ -109,7 +109,7 @@
         "LevelID": 3,
         "Level": {
           "Comments": "40KW and Higher",
-          "IsFastChargeCapable": true,
+          "tChargeCapable": true,
           "ID": 3,
           "Title": "Level 3:  High (Over 40kW)"
         },

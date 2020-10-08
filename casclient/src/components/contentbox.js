@@ -5,15 +5,25 @@ import MapBox from './mapbox.js'
 
 export default function contentbox(props) {
 
-    let CharData 
-    
+    let CharData
+
     return (
         <div className={styles.contentbox}>
-            
+
             <h1 className={styles.header}>CarCharProject</h1>
             <div>
-            <Leftmenu items={props.items} CharData={CharData} SelectedCharger={props.SelectedCharger}/>
-            <MapBox items={props.items} CharData={CharData} SetSelectedCharger={props.SetSelectedCharger}/>
+                <Leftmenu
+                    items={props.items}
+                    CharData={CharData}
+                    SelectedCharger={props.SelectedCharger}
+                    chargingIsOn={props.chargingIsOn}
+                    SetChargingIsOn={props.SetChargingIsOn}
+                />
+                <MapBox
+                    items={props.items}
+                    CharData={CharData}
+                    SetSelectedCharger={props.SetSelectedCharger}
+                />
             </div>
         </div>
     )

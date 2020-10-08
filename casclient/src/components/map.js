@@ -12,7 +12,6 @@ export class MapContainer extends Component  {
   onMarkerClick = (item, data) => {
     data = item.id
     this.props.SetSelectedCharger(item)
-    console.log(item)
   }
 
 

@@ -15,7 +15,6 @@ function passwordChanged(event) {
 
 
 function buttonClick(event) {
-    console.log("clicked")
     axios.post('http://localhost:4000/login', {}, {
         auth: {
             username: userUser,
