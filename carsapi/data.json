@@ -236,7 +236,7 @@
     "OperatorID": 198,
     "OperatorsReference": null,
     "UsageTypeID": 1,
-    "UsageCost": "50c/min",
+    "UsageCost": "0.50/min",
     "AddressInfo": {
       "ID": 168887,
       "Title": "McDonalds Kempele",
@@ -1600,7 +1600,7 @@
     "OperatorID": 136,
     "OperatorsReference": null,
     "UsageTypeID": 4,
-    "UsageCost": "0,15€/kWh",
+    "UsageCost": "0.15€/kWh",
     "AddressInfo": {
       "ID": 167669,
       "Title": "Vepsäläinen",
@@ -1738,7 +1738,7 @@
     "OperatorID": 136,
     "OperatorsReference": null,
     "UsageTypeID": 4,
-    "UsageCost": "0,25€/kWh + parking fee",
+    "UsageCost": "0.25€/kWh + parking fee",
     "AddressInfo": {
       "ID": 167615,
       "Title": "Helen Malmin Kirkko",
@@ -2125,7 +2125,7 @@
     "OperatorID": 136,
     "OperatorsReference": null,
     "UsageTypeID": 4,
-    "UsageCost": "0,18€/kWh",
+    "UsageCost": "0.18€/kWh",
     "AddressInfo": {
       "ID": 167546,
       "Title": "Keimola Golf",
@@ -2263,7 +2263,7 @@
     "OperatorID": 136,
     "OperatorsReference": null,
     "UsageTypeID": 4,
-    "UsageCost": "0,15€/kWh",
+    "UsageCost": "0.15€/kWh",
     "AddressInfo": {
       "ID": 167545,
       "Title": "Laattapiste",
@@ -2401,7 +2401,7 @@
     "OperatorID": 136,
     "OperatorsReference": null,
     "UsageTypeID": 4,
-    "UsageCost": "0,22/min",
+    "UsageCost": "0.22/min",
     "AddressInfo": {
       "ID": 163397,
       "Title": "Kummunkatu",
@@ -2576,7 +2576,7 @@
     "OperatorID": 136,
     "OperatorsReference": null,
     "UsageTypeID": 4,
-    "UsageCost": "0,18€/kWh",
+    "UsageCost": "0.18€/kWh",
     "AddressInfo": {
       "ID": 163379,
       "Title": "Kauppakeskus Myyrmanni",
