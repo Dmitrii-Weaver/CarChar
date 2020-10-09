@@ -1388,7 +1388,7 @@
     "OperatorID": 3354,
     "OperatorsReference": null,
     "UsageTypeID": 1,
-    "UsageCost": "DC 1€+0.2€/min. Type 2: 0.02€/min1€ per started charge.",
+    "UsageCost": "0.20€/min + 1€ per started charge.",
     "AddressInfo": {
       "ID": 167670,
       "Title": "K Supermarket Lähderanta",

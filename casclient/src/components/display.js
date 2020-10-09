@@ -7,6 +7,10 @@ export default function Display(props) {
     return (
         
         <div>
+            {
+                (props.status == 4) ?
+                    <p>Please, choose connection</p> : ""
+            }
             
             
             {
@@ -15,16 +19,25 @@ export default function Display(props) {
                 <div>
                 <span>{(props.time.h >= 10) ? props.time.h : "0" + props.time.h}</span>&nbsp;:&nbsp;
                 <span>{(props.time.m >= 10) ? props.time.m : "0" + props.time.m}</span>&nbsp;:&nbsp;
-                <span>{(props.time.s >= 10) ? props.time.s : "0" + props.time.s}</span>&nbsp;:&nbsp;
-                <span>{(props.time.ms >= 10) ? props.time.ms : "0" + props.time.ms}</span> 
+                <span>{(props.time.s >= 10) ? props.time.s : "0" + props.time.s}</span>
+
                 </div>: ""
             }
+            {
+                (props.selectedSlot != null && props.status !=3) ?
+            <div>charging from {props.selectedSlot.ConnectionType.Title} located at {props.location}</div>: ""
+            }
             
-            {(props.status == 3) ?
+            {(props.status == 3 ) ?
         
 
-                    <span>To pay : {props.totalCost.totalCost}e</span> : ""
+                    <span>To pay : {props.totalCost.totalCost}</span> : ""
             }
+            {
+                (props.selectedSlot != null && props.status ==3) ?
+            <div>for charging at {props.location}</div>: ""
+            }
+            
         </div>
     )
 }

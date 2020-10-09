@@ -54,7 +54,7 @@ export default class leftmenu extends Component {
 
                     <h3 className={styles.text}>Price : {this.props.SelectedCharger.UsageCost}</h3>
 
-                        <Stopwatch usageCost={this.props.SelectedCharger.UsageCost}/>
+                        <Stopwatch className={styles.Stopwatch} SelectedCharger={this.props.SelectedCharger} selectedSlot={this.state.selectedSlot} usageCost={this.props.SelectedCharger.UsageCost}/>
 
 
                 </div>
