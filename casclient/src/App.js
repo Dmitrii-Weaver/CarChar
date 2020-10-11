@@ -20,7 +20,7 @@ class App extends React.Component {
   }
   componentDidMount(){
 
-      axios.get('http://localhost:4000/data2')
+      axios.get('http://http://54.82.112.239//data2')
     
       .then((response) => {
         this.setState({ items: response.data })
