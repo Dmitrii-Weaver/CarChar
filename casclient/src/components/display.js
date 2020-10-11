@@ -8,7 +8,7 @@ export default function Display(props) {
         
         <div>
             {
-                (props.status == 4) ?
+                (props.status == 4 && props.slot == null) ?
                     <p>Please, choose connection</p> : ""
             }
             
@@ -24,8 +24,8 @@ export default function Display(props) {
                 </div>: ""
             }
             {
-                (props.selectedSlot != null && props.status !=3) ?
-            <div>charging from {props.selectedSlot.ConnectionType.Title} located at {props.location}</div>: ""
+                (props.slot != null && props.status !=3) ?
+            <div>charging from {props.slot.ConnectionType.Title} located at {props.location}</div>: ""
             }
             
             {(props.status == 3 ) ?
@@ -34,7 +34,7 @@ export default function Display(props) {
                     <span>To pay : {props.totalCost.totalCost}</span> : ""
             }
             {
-                (props.selectedSlot != null && props.status ==3) ?
+                (props.slot != null && props.status ==3) ?
             <div>for charging at {props.location}</div>: ""
             }
             

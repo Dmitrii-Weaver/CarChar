@@ -1,9 +1,13 @@
 .contentbox{
-    border: 1px solid black;
+    background-color: #85877C;
     width: 75%;
     height: 100%;
     margin: auto;
     margin-bottom: 25px;
+}
+
+body{
+    background-color: #85877C;
 }
 
 .header{
@@ -12,6 +16,7 @@
 
 .loginbox{
     border: 1px solid black;
+    background-color:#7E998A;
     width: 400px;
     height: 500px;
     margin: auto;

@@ -9,7 +9,10 @@ function Stopwatch(props) {
     const [interv, setInterv] = useState({})
     const [status, setStatus] = useState(0)
     const [location, setLocation] = useState("-")
+    const [slot, setSlot] = useState(null)
     const [usageCost, setUsageCost] = useState()
+
+    
 
     const calculatePrice = (props) => {
         if (usageCost == "free" || usageCost == "unknown") {
@@ -32,11 +35,11 @@ function Stopwatch(props) {
             setTotalCost({ totalCost: updatedCost })
         }
         else if (usageCost.includes("/kWh")) {
-            if (props.selectedSlot != null) {
+            if (slot != null) {
                 let number = usageCost.substring(0, 4)
                 let theNumber = parseFloat(number)
 
-                let power = props.selectedSlot.PowerKW
+                let power = slot.PowerKW
                 let timeInHours = time.totalM / 60
                 let usedPower = power * timeInHours
                 let updatedCost = (usedPower * theNumber)
@@ -54,8 +57,9 @@ function Stopwatch(props) {
 
     const start = () => {
         setLocation(props.SelectedCharger.AddressInfo.Title)
+        setSlot(props.selectedSlot)
         setUsageCost(props.usageCost)
-        if (props.selectedSlot == null) {
+        if (slot === null) {
             setStatus(4)
         }
         else {
@@ -108,7 +112,7 @@ function Stopwatch(props) {
     return (
         <div className={styles.holder}>
             <div >
-                <Display time={time} status={status} selectedSlot={props.selectedSlot} totalCost={totalCost} location={location} />
+                <Display time={time} status={status} slot={slot} totalCost={totalCost} location={location} />
                 <Btn status={status} resume={resume} stop={stop} reset={reset} start={start}  />
             </div>
         </div>

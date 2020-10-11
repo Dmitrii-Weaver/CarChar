@@ -5,7 +5,7 @@ export default function btn(props) {
     return (
         <div>
             {(props.status == 0) ?
-                <button onClick={props.start}>Start charging</button> : ""
+                <button onClick={props.start}>Select</button> : ""
 
             }
             {(props.status == 1) ?

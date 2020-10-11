@@ -43,6 +43,7 @@ app.post ("/register", (req, res) => {
         username: req.body.username,
         password: passwordHash
     })
+    console.log("registered")
     res.sendStatus(200)
 })
 
