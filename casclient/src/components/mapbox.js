@@ -6,9 +6,14 @@ export default function mapbox(props) {
 
     return (
         <div className={styles.mapbox}>
-            
-            <MapContainer items={props.items} CharData={props.CharData} SetSelectedCharger={props.SetSelectedCharger}/>
-            
+
+            <MapContainer
+                items={props.items}
+                CharData={props.CharData}
+                SetSelectedCharger={props.SetSelectedCharger} 
+                
+                searchResult={props.searchResult}/>
+
         </div>
     )
 }

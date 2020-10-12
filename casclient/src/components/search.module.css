@@ -1,0 +1,12 @@
+.contentbox{
+    width: 99% ;
+    border: black solid 2px;
+    text-align: center;
+    background-color: darkgrey;
+}
+
+input{
+    margin: auto;
+    width: 90%;
+    margin-bottom: 10px;
+}

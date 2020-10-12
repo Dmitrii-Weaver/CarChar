@@ -14,7 +14,8 @@ class App extends React.Component {
       items: [],
       isLoggedIn : false,
       SelectedCharger: null,
-      chargingIsOn: false
+      chargingIsOn: false,
+      searchResult: []
       
     }
   }
@@ -24,6 +25,7 @@ class App extends React.Component {
     
       .then((response) => {
         this.setState({ items: response.data })
+        this.setState({searchResult: response.data})
       });
   }
 
@@ -35,6 +37,10 @@ class App extends React.Component {
     this.setState({chargingIsOn: parameter})
   }
 
+  SetSearchResult = (parameter) => {
+    this.setState({searchResult: parameter})
+  }
+
 
 
   render() {
@@ -43,11 +49,15 @@ class App extends React.Component {
       <Router history={history}>
 
         <Route path="/" exact component={Login} />
-        <Route path="/content" render={(props) => <Contentbox items={this.state.items} 
+        <Route path="/content" render={(props) => <Contentbox 
+        items={this.state.items} 
         chargingIsOn={this.state.chargingIsOn} 
         SetChargingIsOn={this.SetChargingIsOn}
          SetSelectedCharger={this.SetSelectedCharger} 
-         SelectedCharger={this.state.SelectedCharger}/> } />      
+         SelectedCharger={this.state.SelectedCharger}
+         SetSearchResult={this.SetSearchResult}
+         searchResult={this.state.searchResult}
+         /> } />      
         
       </Router>
       

@@ -1,5 +1,5 @@
 .contentbox{
-    background-color: #85877C;
+    background-color: #DCDCDC;
     width: 75%;
     height: 100%;
     margin: auto;
@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #85877C;
+    background-color: #DCDCDC;
 }
 
 .header{
@@ -16,7 +16,7 @@ body{
 
 .loginbox{
     border: 1px solid black;
-    background-color:#7E998A;
+    background-color:#C0C0C0;
     width: 400px;
     height: 500px;
     margin: auto;

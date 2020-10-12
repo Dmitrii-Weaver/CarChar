@@ -1,6 +1,7 @@
 
 import React, { Component, useState } from 'react'
 import styles from "./leftmenu.module.css"
+import Search from './search.js'
 import Stopwatch from './stopwatch.js'
 
 
@@ -26,6 +27,8 @@ export default class leftmenu extends Component {
     render() {
         let output = (
             <div className={styles.menu}>
+                
+                <Search  items={this.props.items} searchResult={this.props.searchResult}  SetSearchResult={this.props.SetSearchResult}/>
                 <h1 className={styles.text}>Name : </h1>
                 <h3 className={styles.text}>Address : </h3>
                 <h4 className={styles.text}>Access :</h4>
@@ -39,6 +42,7 @@ export default class leftmenu extends Component {
 
             output = (
                 <div className={styles.menu} >
+                    <Search  items={this.props.items} searchResult={this.props.searchResult}  SetSearchResult={this.props.SetSearchResult}/>
                     <h1 className={styles.text} >Name : {this.props.SelectedCharger.AddressInfo.Title}</h1>
                     <h3 className={styles.text}>Address : {this.props.SelectedCharger.AddressInfo.AddressLine1}</h3>
                     <h4 className={styles.text}>Access : {this.props.SelectedCharger.UsageType.Title}</h4>
