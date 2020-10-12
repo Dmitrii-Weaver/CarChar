@@ -2,16 +2,22 @@ import React from 'react'
 import styles from "./contentbox.module.css"
 import Leftmenu from './leftmenu.js'
 import MapBox from './mapbox.js'
-
+import { Redirect, Route } from "react-router-dom";
 export default function contentbox(props) {
+    
 
     let CharData
+    let output
 
-    return (
-        <div className={styles.contentbox}>
+    if (props.isLoggedIn == true){
+        output = (
+            <div className={styles.contentbox}>
 
             <h1 className={styles.header}>CarCharProject</h1>
+            {console.log(props.isLoggedIn)}
+
             <div>
+                
             
                 <Leftmenu
                     items={props.items}
@@ -31,5 +37,13 @@ export default function contentbox(props) {
                 />
             </div>
         </div>
+        )
+    }
+    else {
+        output =  <Redirect to='/' />
+    }
+
+    return (
+       output
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./login.module.css"
 import axios from 'axios';
-import history from '../history.js'
+
 
 let userUser 
 let userPassword
@@ -14,7 +14,7 @@ function passwordChanged(event) {
 }
 
 
-function buttonClick(event) {
+function buttonClick( props) {
     axios.post('http://localhost:4000/login', {}, {
         auth: {
             username: userUser,
@@ -22,14 +22,17 @@ function buttonClick(event) {
         }
     })
         .then(response => {
-            
-                history.push('/content');
-                window.location.reload(false);
+                props.SetIsLoggedIn()
+                props.history.push('/content');
             
         } ) 
+        .catch(() => {
+            console.log("failed")
+          })
 }
 
-export default function login() {
+export default function login(props) {
+   
     return (
         <div>
             <div className={styles.contentbox}>
@@ -50,7 +53,7 @@ export default function login() {
 
                     <br></br>
                     <div className={styles.logincontainer}>
-                        <button type="submit" onClick={() => buttonClick()}>Login</button>
+                        <button type="submit" onClick={() => buttonClick(props)}>Login</button>
                     </div>
 
                 </div>
