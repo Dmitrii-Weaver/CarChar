@@ -8,13 +8,13 @@ export default function Display(props) {
         
         <div>
             {
-                (props.status == 4 && props.slot == null) ?
+                (props.status == 4 && (props.slot == null || props.slot == "undefined")) ?
                     <p>Please, choose connection</p> : ""
             }
             
             
             {
-                (props.status !=3) ?
+                (props.status !=3 && props.status !=4 && props.status != 0) ?
                 
                 <div>
                 <span>{(props.time.h >= 10) ? props.time.h : "0" + props.time.h}</span>&nbsp;:&nbsp;

@@ -29,7 +29,6 @@ class App extends React.Component {
   }
   SetIsLoggedIn = () => {
     this.setState({ isLoggedIn: true })
-    console.log(this.state.isLoggedIn)
   }
 
   SetSelectedCharger = (parameter) => {

@@ -13,10 +13,10 @@ export default class leftmenu extends Component {
 
 
     SelectSlot(Connection) {
-        if (Connection) {
-            this.setSelectedSlot(Connection)
-            console.log(this.state.selectedSlot)
-        }
+
+        this.setSelectedSlot(Connection)
+        console.log(this.state.selectedSlot)
+
     }
     setSelectedSlot(parameter) {
         this.setState({ selectedSlot: parameter })
@@ -25,10 +25,13 @@ export default class leftmenu extends Component {
 
 
     render() {
+        {
+            console.log(this.state.setSelectedSlot)
+        }
         let output = (
             <div className={styles.menu}>
-                
-                <Search  items={this.props.items} searchResult={this.props.searchResult}  SetSearchResult={this.props.SetSearchResult}/>
+
+                <Search items={this.props.items} searchResult={this.props.searchResult} SetSearchResult={this.props.SetSearchResult} />
                 <h1 className={styles.text}>Name : </h1>
                 <h3 className={styles.text}>Address : </h3>
                 <h4 className={styles.text}>Access :</h4>
@@ -42,7 +45,7 @@ export default class leftmenu extends Component {
 
             output = (
                 <div className={styles.menu} >
-                    <Search  items={this.props.items} searchResult={this.props.searchResult}  SetSearchResult={this.props.SetSearchResult}/>
+                    <Search items={this.props.items} searchResult={this.props.searchResult} SetSearchResult={this.props.SetSearchResult} />
                     <h1 className={styles.text} >Name : {this.props.SelectedCharger.AddressInfo.Title}</h1>
                     <h3 className={styles.text}>Address : {this.props.SelectedCharger.AddressInfo.AddressLine1}</h3>
                     <h4 className={styles.text}>Access : {this.props.SelectedCharger.UsageType.Title}</h4>
@@ -58,7 +61,7 @@ export default class leftmenu extends Component {
 
                     <h3 className={styles.text}>Price : {this.props.SelectedCharger.UsageCost}</h3>
 
-                        <Stopwatch className={styles.Stopwatch} SelectedCharger={this.props.SelectedCharger} selectedSlot={this.state.selectedSlot} usageCost={this.props.SelectedCharger.UsageCost}/>
+                    <Stopwatch className={styles.Stopwatch} SelectedCharger={this.props.SelectedCharger} selectedSlot={this.state.selectedSlot} usageCost={this.props.SelectedCharger.UsageCost} />
 
 
                 </div>

@@ -12,6 +12,8 @@ function Stopwatch(props) {
     const [slot, setSlot] = useState(null)
     const [usageCost, setUsageCost] = useState()
 
+
+    
     
 
     const calculatePrice = (props) => {
@@ -22,7 +24,6 @@ function Stopwatch(props) {
             let number = usageCost.substring(0, 4)
 
             let theNumber = parseFloat(number)
-            console.log(theNumber)
             let updatedCost = (time.totalM * theNumber) + "e"
             setTotalCost({ totalCost: updatedCost })
         }
@@ -30,7 +31,6 @@ function Stopwatch(props) {
             let number = usageCost.substring(0, 4)
 
             let theNumber = parseFloat(number)
-            console.log(theNumber)
             let updatedCost = (time.totalM * theNumber) + 1 + "e"
             setTotalCost({ totalCost: updatedCost })
         }
@@ -56,13 +56,16 @@ function Stopwatch(props) {
 
 
     const start = () => {
-        setLocation(props.SelectedCharger.AddressInfo.Title)
         setSlot(props.selectedSlot)
-        setUsageCost(props.usageCost)
-        if (slot === null) {
+        console.log(slot)
+
+        if (slot == null || slot == 'undefined') {
             setStatus(4)
         }
         else {
+            setLocation(props.SelectedCharger.AddressInfo.Title)
+        
+            setUsageCost(props.usageCost)
             run()
             setStatus(1)
             setInterv(setInterval(run, 10))

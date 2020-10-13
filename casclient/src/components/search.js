@@ -17,7 +17,6 @@ export default class Search extends Component {
             })
             this.props.SetSearchResult(array)
         }
-        console.log(this.props.searchResult)
     }
 
     render() {

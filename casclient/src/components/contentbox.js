@@ -14,8 +14,6 @@ export default function contentbox(props) {
             <div className={styles.contentbox}>
 
             <h1 className={styles.header}>CarCharProject</h1>
-            {console.log(props.isLoggedIn)}
-
             <div>
                 
             

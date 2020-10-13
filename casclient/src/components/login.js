@@ -28,6 +28,7 @@ function buttonClick( props) {
         } ) 
         .catch(() => {
             console.log("failed")
+            props.history.push('/');
           })
 }
 
