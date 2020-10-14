@@ -6,9 +6,12 @@ import Stopwatch from './stopwatch.js'
 
 
 export default class leftmenu extends Component {
-    state = {
-        buttonText: "Start charging",
-        selectedSlot: null,
+    constructor(props) {
+        super(props);
+        this.state = {
+            buttonText: "Start charging",
+            selectedSlot: null,
+        }
     }
 
 
@@ -51,6 +54,7 @@ export default class leftmenu extends Component {
                     <h4 className={styles.text}>Access : {this.props.SelectedCharger.UsageType.Title}</h4>
                     <h4 className={styles.text}>Status : {this.props.SelectedCharger.StatusType.Title}</h4>
                     <h3 className={styles.text}>Connections : &#8203;
+
                     <select id={"SlotSelector"} >
                             <option value={"---"}> --- </option>
                             {
