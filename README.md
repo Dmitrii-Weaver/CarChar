@@ -1,2 +1,1 @@
-# CarChar
-CarCharProject
+# CarChar project - an interactive map that shows the charger for electrocars location on the map, allows you to search via search bar, see details and calculate the price of charging with log in system up and working. Both API and CLIENT made by me.
